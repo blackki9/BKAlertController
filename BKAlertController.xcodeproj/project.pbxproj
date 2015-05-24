@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDC826311B10AA4000463EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826301B10AA4000463EF2 /* main.m */; };
+		FDC826341B10AA4000463EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826331B10AA4000463EF2 /* AppDelegate.m */; };
+		FDC826371B10AA4000463EF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826361B10AA4000463EF2 /* ViewController.m */; };
+		FDC8263A1B10AA4000463EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC826381B10AA4000463EF2 /* Main.storyboard */; };
+		FDC8263C1B10AA4000463EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC8263B1B10AA4000463EF2 /* Images.xcassets */; };
+		FDC8263F1B10AA4000463EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC8263D1B10AA4000463EF2 /* LaunchScreen.xib */; };
+		FDC8264B1B10AA4000463EF2 /* BKAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC8264A1B10AA4000463EF2 /* BKAlertControllerTests.m */; };
+		FDC826571B10AAEE00463EF2 /* BKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826561B10AAEE00463EF2 /* BKAlertController.m */; };
+		FDC8265A1B11FBE200463EF2 /* InspectableBKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDC826451B10AA4000463EF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC826231B10AA4000463EF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC8262A1B10AA4000463EF2;
+			remoteInfo = BKAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDC8262B1B10AA4000463EF2 /* BKAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BKAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC8262F1B10AA4000463EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC826301B10AA4000463EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDC826321B10AA4000463EF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FDC826331B10AA4000463EF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FDC826351B10AA4000463EF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FDC826361B10AA4000463EF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FDC826391B10AA4000463EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDC8263B1B10AA4000463EF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FDC8263E1B10AA4000463EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FDC826441B10AA4000463EF2 /* BKAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC826491B10AA4000463EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC8264A1B10AA4000463EF2 /* BKAlertControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAlertControllerTests.m; sourceTree = "<group>"; };
+		FDC826551B10AAEE00463EF2 /* BKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertController.h; sourceTree = "<group>"; };
+		FDC826561B10AAEE00463EF2 /* BKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertController.m; sourceTree = "<group>"; };
+		FDC826581B11FBE200463EF2 /* InspectableBKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectableBKAlertController.h; sourceTree = "<group>"; };
+		FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectableBKAlertController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDC826281B10AA4000463EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC826411B10AA4000463EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDC826221B10AA4000463EF2 = {
+			isa = PBXGroup;
+			children = (
+				FDC8262D1B10AA4000463EF2 /* BKAlertController */,
+				FDC826471B10AA4000463EF2 /* BKAlertControllerTests */,
+				FDC8262C1B10AA4000463EF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDC8262C1B10AA4000463EF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDC8262B1B10AA4000463EF2 /* BKAlertController.app */,
+				FDC826441B10AA4000463EF2 /* BKAlertControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDC8262D1B10AA4000463EF2 /* BKAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				FDC826541B10AA5800463EF2 /* Classes */,
+				FDC826321B10AA4000463EF2 /* AppDelegate.h */,
+				FDC826331B10AA4000463EF2 /* AppDelegate.m */,
+				FDC826351B10AA4000463EF2 /* ViewController.h */,
+				FDC826361B10AA4000463EF2 /* ViewController.m */,
+				FDC826381B10AA4000463EF2 /* Main.storyboard */,
+				FDC8263B1B10AA4000463EF2 /* Images.xcassets */,
+				FDC8263D1B10AA4000463EF2 /* LaunchScreen.xib */,
+				FDC8262E1B10AA4000463EF2 /* Supporting Files */,
+			);
+			path = BKAlertController;
+			sourceTree = "<group>";
+		};
+		FDC8262E1B10AA4000463EF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDC8262F1B10AA4000463EF2 /* Info.plist */,
+				FDC826301B10AA4000463EF2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDC826471B10AA4000463EF2 /* BKAlertControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC8264A1B10AA4000463EF2 /* BKAlertControllerTests.m */,
+				FDC826481B10AA4000463EF2 /* Supporting Files */,
+				FDC826581B11FBE200463EF2 /* InspectableBKAlertController.h */,
+				FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */,
+			);
+			path = BKAlertControllerTests;
+			sourceTree = "<group>";
+		};
+		FDC826481B10AA4000463EF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDC826491B10AA4000463EF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDC826541B10AA5800463EF2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FDC826551B10AAEE00463EF2 /* BKAlertController.h */,
+				FDC826561B10AAEE00463EF2 /* BKAlertController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDC8262A1B10AA4000463EF2 /* BKAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC8264E1B10AA4100463EF2 /* Build configuration list for PBXNativeTarget "BKAlertController" */;
+			buildPhases = (
+				FDC826271B10AA4000463EF2 /* Sources */,
+				FDC826281B10AA4000463EF2 /* Frameworks */,
+				FDC826291B10AA4000463EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BKAlertController;
+			productName = BKAlertController;
+			productReference = FDC8262B1B10AA4000463EF2 /* BKAlertController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDC826431B10AA4000463EF2 /* BKAlertControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC826511B10AA4100463EF2 /* Build configuration list for PBXNativeTarget "BKAlertControllerTests" */;
+			buildPhases = (
+				FDC826401B10AA4000463EF2 /* Sources */,
+				FDC826411B10AA4000463EF2 /* Frameworks */,
+				FDC826421B10AA4000463EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDC826461B10AA4000463EF2 /* PBXTargetDependency */,
+			);
+			name = BKAlertControllerTests;
+			productName = BKAlertControllerTests;
+			productReference = FDC826441B10AA4000463EF2 /* BKAlertControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDC826231B10AA4000463EF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = black9;
+				TargetAttributes = {
+					FDC8262A1B10AA4000463EF2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FDC826431B10AA4000463EF2 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FDC8262A1B10AA4000463EF2;
+					};
+				};
+			};
+			buildConfigurationList = FDC826261B10AA4000463EF2 /* Build configuration list for PBXProject "BKAlertController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDC826221B10AA4000463EF2;
+			productRefGroup = FDC8262C1B10AA4000463EF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDC8262A1B10AA4000463EF2 /* BKAlertController */,
+				FDC826431B10AA4000463EF2 /* BKAlertControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDC826291B10AA4000463EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC8263A1B10AA4000463EF2 /* Main.storyboard in Resources */,
+				FDC8263F1B10AA4000463EF2 /* LaunchScreen.xib in Resources */,
+				FDC8263C1B10AA4000463EF2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC826421B10AA4000463EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDC826271B10AA4000463EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC826371B10AA4000463EF2 /* ViewController.m in Sources */,
+				FDC826341B10AA4000463EF2 /* AppDelegate.m in Sources */,
+				FDC826311B10AA4000463EF2 /* main.m in Sources */,
+				FDC826571B10AAEE00463EF2 /* BKAlertController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC826401B10AA4000463EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC8265A1B11FBE200463EF2 /* InspectableBKAlertController.m in Sources */,
+				FDC8264B1B10AA4000463EF2 /* BKAlertControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDC826461B10AA4000463EF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC8262A1B10AA4000463EF2 /* BKAlertController */;
+			targetProxy = FDC826451B10AA4000463EF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDC826381B10AA4000463EF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC826391B10AA4000463EF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDC8263D1B10AA4000463EF2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC8263E1B10AA4000463EF2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDC8264C1B10AA4000463EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FDC8264D1B10AA4000463EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDC8264F1B10AA4100463EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BKAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FDC826501B10AA4100463EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BKAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FDC826521B10AA4100463EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BKAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKAlertController.app/BKAlertController";
+			};
+			name = Debug;
+		};
+		FDC826531B10AA4100463EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BKAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKAlertController.app/BKAlertController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDC826261B10AA4000463EF2 /* Build configuration list for PBXProject "BKAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC8264C1B10AA4000463EF2 /* Debug */,
+				FDC8264D1B10AA4000463EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC8264E1B10AA4100463EF2 /* Build configuration list for PBXNativeTarget "BKAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC8264F1B10AA4100463EF2 /* Debug */,
+				FDC826501B10AA4100463EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC826511B10AA4100463EF2 /* Build configuration list for PBXNativeTarget "BKAlertControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC826521B10AA4100463EF2 /* Debug */,
+				FDC826531B10AA4100463EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDC826231B10AA4000463EF2 /* Project object */;
+}
