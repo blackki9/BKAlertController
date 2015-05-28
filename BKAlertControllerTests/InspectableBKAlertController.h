@@ -7,10 +7,16 @@
 //
 
 #import "BKAlertController.h"
+#import "BKAlertPresenter.h"
 
 @interface InspectableBKAlertController : BKAlertController
 
-- (NSString*)savedTitle;
-- (NSString*)savedMessage;
+- (NSString*)savedAlertTitle;
+- (NSString*)savedAlertMessage;
+
+- (void)setVersionToiOS7;
+- (void)setVersionToiOS8;
+
+- (NSObject<BKAlertPresenter>*)currentTestPresenter;
 
 @end

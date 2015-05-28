@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "BKAlertController.h"
 #import "InspectableBKAlertController.h"
+#import "BKUIAlertViewPresenter.h"
 
 @interface BKAlertControllerTests : XCTestCase
 
@@ -38,8 +38,8 @@
 
 - (void)testAlertControllerSavesTitleAndMessage
 {
-    NSString* savedTitle = [self.alertController savedTitle];
-    NSString* savedMessage = [self.alertController savedMessage];
+    NSString* savedTitle = [self.alertController savedAlertTitle];
+    NSString* savedMessage = [self.alertController savedAlertMessage];
     
     XCTAssertEqual(savedTitle, @"Title",@"alert controller should save its title");
     XCTAssertEqual(savedMessage, @"Message",@"Alert controller should save its message");
@@ -47,13 +47,31 @@
 
 - (void)testAlertControllerWithDifferentTitle
 {
-    NSString* savedTitle = [self.anotherAlertController savedTitle];
-    NSString* savedMessage = [self.anotherAlertController savedMessage];
+    NSString* savedTitle = [self.anotherAlertController savedAlertTitle];
+    NSString* savedMessage = [self.anotherAlertController savedAlertMessage];
     
     XCTAssertEqual(savedTitle, @"Another title",@"Alert controller should save different titles");
     XCTAssertEqual(savedMessage, @"Another message",@"Alert controller should save different messages");
 }
 
+- (void)testAlertControllerShowUIAlertViewIfVersionLessThan8
+{
+    [self.alertController setVersionToiOS7];
+    [self.alertController show];
+    Class classType = [[self.alertController currentTestPresenter] class];
+    NSString* className = NSStringFromClass(classType);
+    
+    XCTAssertTrue([className isEqualToString:@"BKUIAlertViewPresenter"]);
+}
+
+- (void)testAlertControllerShowUIAlertControllerIfVersionEqualOfGreaterThan8
+{
+    [self.alertController setVersionToiOS8];
+    [self.alertController show];
+    NSString* className = NSStringFromClass([[self.alertController currentTestPresenter] class]);
+    
+    XCTAssertTrue([className isEqualToString:@"BKUIAlertControllerPresenter"]);
+}
 
 
 @end

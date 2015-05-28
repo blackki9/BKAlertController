@@ -10,9 +10,8 @@
 
 @interface BKAlertController : NSObject
 
-@property (nonatomic,copy) NSString* alertTitle;
-@property (nonatomic, copy) NSString* alertMessage;
 
 - (instancetype)initWithTitle:(NSString*)title message:(NSString*)message;
+- (void)show;
 
 @end

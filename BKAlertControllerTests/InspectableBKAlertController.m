@@ -10,14 +10,28 @@
 
 @implementation InspectableBKAlertController
 
-- (NSString*)savedTitle
+- (NSString*)savedAlertTitle
 {
-    return self.alertTitle;
+    return [self valueForKey:@"alertTitle"];
+}
+- (NSString*)savedAlertMessage
+{
+    return [self valueForKey:@"alertMessage"];
 }
 
-- (NSString*)savedMessage
+- (void)setVersionToiOS7
 {
-    return self.alertMessage;
+    return [self setValue:@"7.0" forKey:@"currentiOSVersion"];
+}
+
+- (void)setVersionToiOS8
+{
+    return [self setValue:@"8.0" forKey:@"currentiOSVersion"];    
+}
+
+- (NSObject<BKAlertPresenter>*)currentTestPresenter
+{
+    return [self valueForKey:@"currentPresenter"];
 }
 
 @end
