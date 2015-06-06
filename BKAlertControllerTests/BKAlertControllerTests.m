@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "InspectableBKAlertController.h"
 #import "BKUIAlertViewPresenter.h"
+#import "TestingBKAlertPresenter.h"
 
 @interface BKAlertControllerTests : XCTestCase
 
@@ -59,18 +60,26 @@
     [self.alertController setVersionToiOS7];
     [self.alertController show];
     Class classType = [[self.alertController currentTestPresenter] class];
-    NSString* className = NSStringFromClass(classType);
     
-    XCTAssertTrue([className isEqualToString:@"BKUIAlertViewPresenter"]);
+    XCTAssertTrue([[self.alertController currentTestPresenter] isKindOfClass:classType]);
+}
+
+- (void)testAlertControllerCallShowMethodInAlertViewPresenter
+{
+    [self.alertController setVersionToiOS7];
+    [self.alertController show];
+    
+    TestingBKAlertPresenter* presenter = (TestingBKAlertPresenter*)[self.alertController currentTestPresenter];
+    XCTAssertTrue([presenter isShowWasCalled]);
 }
 
 - (void)testAlertControllerShowUIAlertControllerIfVersionEqualOfGreaterThan8
 {
     [self.alertController setVersionToiOS8];
     [self.alertController show];
-    NSString* className = NSStringFromClass([[self.alertController currentTestPresenter] class]);
+    Class classType = [[self.alertController currentTestPresenter] class];
     
-    XCTAssertTrue([className isEqualToString:@"BKUIAlertControllerPresenter"]);
+    XCTAssertTrue([[self.alertController currentTestPresenter] isKindOfClass:classType]);
 }
 
 

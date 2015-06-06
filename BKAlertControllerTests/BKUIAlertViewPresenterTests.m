@@ -10,6 +10,7 @@
 
 #import <XCTest/XCTest.h>
 #import "BKUIAlertViewPresenter.h"
+#import "BKAlertButtonAction.h"
 
 #define ALERT_PROPERTY_KEY @"currentAlertView"
 
@@ -83,5 +84,71 @@
     XCTAssertEqual(self.presenter, presentedAlert.delegate);
 }
 
+- (void)testIfPresenterUseNotOnlyOneAlertView
+{
+    [self.presenter show];
+    UIAlertView* presentedAlert = [self alertFromPresenter];
+    [self.presenter show];
+    UIAlertView* secondPresentedAlert = [self alertFromPresenter];
+    
+    XCTAssertNotEqual(presentedAlert, secondPresentedAlert,@"Presenter should use different UIAlertView for each show");
+}
+
+- (void)testAddingOfButtonToAlertView
+{
+    [self addTestButtonToPresenter];
+    XCTAssertTrue(self.presenter.buttons.count == 1,@"presenter should add button to array");
+}
+- (void)addTestButtonToPresenter
+{
+    [self.presenter addButtonWithTitle:@"Button1" action:^() {
+        
+    }];
+}
+
+- (void)testThatAddingButtonAddsButtonActionObject
+{
+    [self addTestButtonToPresenter];
+    BKAlertButtonAction* buttonAction = [self.presenter.buttons firstObject];
+    XCTAssertTrue([buttonAction isKindOfClass:[BKAlertButtonAction class]]);
+}
+
+- (void)testIfAddedActionHasRightTitleAndAction
+{
+    ButtonActionBlock buttonBlock = ^() {
+    };
+    [self.presenter addButtonWithTitle:@"Button Title" action:buttonBlock];
+    BKAlertButtonAction* buttonAction = [self.presenter.buttons firstObject];
+
+    XCTAssertEqual(buttonBlock, buttonAction.buttonAction);
+    XCTAssertTrue([buttonAction.title isEqualToString:@"Button Title"]);
+}
+
+- (void)testIfAddedActionAddButtonOnAlertView
+{
+    ButtonActionBlock buttonBlock = ^() {
+    };
+    [self.presenter addButtonWithTitle:@"Button Title" action:buttonBlock];
+    [self.presenter show];
+    UIAlertView* presentedAlert = [self alertFromPresenter];
+
+    XCTAssertEqual(presentedAlert.numberOfButtons,1);
+    
+}
+
+- (void)testIfAddedActionCanBeCalledViaAlertDelegateMethods
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Alert delegate should call button block of needed button"];
+    ButtonActionBlock buttonBlock = ^() {
+        [expectation fulfill];
+    };
+    
+    [self.presenter addButtonWithTitle:@"Button1" action:buttonBlock];
+    [self.presenter alertView:nil clickedButtonAtIndex:0];
+    
+    [self waitForExpectationsWithTimeout:1.0f handler:^(NSError *error) {
+        
+    }];
+}
 
 @end

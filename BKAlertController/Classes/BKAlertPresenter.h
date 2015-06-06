@@ -9,9 +9,12 @@
 #ifndef BKAlertController_BKAlertPresenter_h
 #define BKAlertController_BKAlertPresenter_h
 
+typedef void (^ButtonActionBlock) ();
+
 @protocol BKAlertPresenter <NSObject>
 
 - (void)show;
+- (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action;
 
 @end
 

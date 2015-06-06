@@ -10,9 +10,11 @@
 #import "BKAlertPresenter.h"
 @import UIKit;
 
+
 @interface BKUIAlertViewPresenter : NSObject <BKAlertPresenter,UIAlertViewDelegate>
 
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, copy) NSString* message;
+@property (nonatomic, strong) NSMutableArray* buttons;
 
 @end

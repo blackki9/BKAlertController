@@ -7,12 +7,41 @@
 //
 
 #import "BKUIAlertControllerPresenter.h"
+#import "BKAlertButtonAction.h"
+
+@interface BKUIAlertControllerPresenter()
+
+@property (nonatomic, strong) UIAlertController* currentAlert;
+
+@end
 
 @implementation BKUIAlertControllerPresenter
 
 - (void)show
 {
+    self.currentAlert = [UIAlertController alertControllerWithTitle:self.title
+                                                            message:self.message
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+    [self addButtonsToAlert];
+}
+- (void)addButtonsToAlert
+{
+    for(BKAlertButtonAction* buttonAction in self.buttons) {
+        UIAlertAction* alertAction = [UIAlertAction actionWithTitle:buttonAction.title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            buttonAction.buttonAction();
+        }];
+        [self.currentAlert addAction:alertAction];
+    }
+   
+}
+
+- (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action
+{
+    if(!self.buttons) {
+        self.buttons = [NSMutableArray array];
+    }
     
+    [self.buttons addObject:[[BKAlertButtonAction alloc] initWithTitle:title action:action]];
 }
 
 @end

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD23B6801B18FA5B002D7899 /* TestingBKAlertPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23B67F1B18FA5B002D7899 /* TestingBKAlertPresenter.m */; };
+		FD23B6831B18FBE8002D7899 /* PresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23B6821B18FBE8002D7899 /* PresenterFactory.m */; };
+		FD23B68B1B1902C0002D7899 /* TestingPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD23B68A1B1902C0002D7899 /* TestingPresenterFactory.m */; };
 		FD8EF2DC1B170118008A7ADA /* BKUIAlertViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2DB1B170118008A7ADA /* BKUIAlertViewPresenter.m */; };
-		FD8EF2DD1B170118008A7ADA /* BKUIAlertViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2DB1B170118008A7ADA /* BKUIAlertViewPresenter.m */; };
 		FD8EF2E11B1705B6008A7ADA /* BKUIAlertControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2E01B1705B6008A7ADA /* BKUIAlertControllerPresenter.m */; };
 		FD8EF2E21B1705B6008A7ADA /* BKUIAlertControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2E01B1705B6008A7ADA /* BKUIAlertControllerPresenter.m */; };
 		FD8EF2E41B17068E008A7ADA /* BKUIAlertViewPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2E31B17068E008A7ADA /* BKUIAlertViewPresenterTests.m */; };
+		FD8EF2E71B173AE8008A7ADA /* BKAlertButtonAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF2E61B173AE8008A7ADA /* BKAlertButtonAction.m */; };
 		FDC826311B10AA4000463EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826301B10AA4000463EF2 /* main.m */; };
 		FDC826341B10AA4000463EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826331B10AA4000463EF2 /* AppDelegate.m */; };
 		FDC826371B10AA4000463EF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826361B10AA4000463EF2 /* ViewController.m */; };
@@ -21,6 +24,7 @@
 		FDC8264B1B10AA4000463EF2 /* BKAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC8264A1B10AA4000463EF2 /* BKAlertControllerTests.m */; };
 		FDC826571B10AAEE00463EF2 /* BKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826561B10AAEE00463EF2 /* BKAlertController.m */; };
 		FDC8265A1B11FBE200463EF2 /* InspectableBKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */; };
+		FDF2649F1B198D2500E7DA02 /* BKUIAlertControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF2649E1B198D2500E7DA02 /* BKUIAlertControllerPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +38,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD23B67E1B18FA5B002D7899 /* TestingBKAlertPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingBKAlertPresenter.h; sourceTree = "<group>"; };
+		FD23B67F1B18FA5B002D7899 /* TestingBKAlertPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingBKAlertPresenter.m; sourceTree = "<group>"; };
+		FD23B6811B18FBE8002D7899 /* PresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresenterFactory.h; sourceTree = "<group>"; };
+		FD23B6821B18FBE8002D7899 /* PresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresenterFactory.m; sourceTree = "<group>"; };
+		FD23B6891B1902C0002D7899 /* TestingPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingPresenterFactory.h; sourceTree = "<group>"; };
+		FD23B68A1B1902C0002D7899 /* TestingPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingPresenterFactory.m; sourceTree = "<group>"; };
 		FD8EF2DA1B170118008A7ADA /* BKUIAlertViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUIAlertViewPresenter.h; sourceTree = "<group>"; };
 		FD8EF2DB1B170118008A7ADA /* BKUIAlertViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUIAlertViewPresenter.m; sourceTree = "<group>"; };
 		FD8EF2DE1B17013E008A7ADA /* BKAlertPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKAlertPresenter.h; sourceTree = "<group>"; };
 		FD8EF2DF1B1705B6008A7ADA /* BKUIAlertControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUIAlertControllerPresenter.h; sourceTree = "<group>"; };
 		FD8EF2E01B1705B6008A7ADA /* BKUIAlertControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUIAlertControllerPresenter.m; sourceTree = "<group>"; };
 		FD8EF2E31B17068E008A7ADA /* BKUIAlertViewPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUIAlertViewPresenterTests.m; sourceTree = "<group>"; };
+		FD8EF2E51B173AE8008A7ADA /* BKAlertButtonAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAlertButtonAction.h; sourceTree = "<group>"; };
+		FD8EF2E61B173AE8008A7ADA /* BKAlertButtonAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertButtonAction.m; sourceTree = "<group>"; };
 		FDC8262B1B10AA4000463EF2 /* BKAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BKAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC8262F1B10AA4000463EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC826301B10AA4000463EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 		FDC826561B10AAEE00463EF2 /* BKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAlertController.m; sourceTree = "<group>"; };
 		FDC826581B11FBE200463EF2 /* InspectableBKAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectableBKAlertController.h; sourceTree = "<group>"; };
 		FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectableBKAlertController.m; sourceTree = "<group>"; };
+		FDF2649E1B198D2500E7DA02 /* BKUIAlertControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUIAlertControllerPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +139,7 @@
 				FDC8264A1B10AA4000463EF2 /* BKAlertControllerTests.m */,
 				FDC826481B10AA4000463EF2 /* Supporting Files */,
 				FD8EF2E31B17068E008A7ADA /* BKUIAlertViewPresenterTests.m */,
+				FDF2649E1B198D2500E7DA02 /* BKUIAlertControllerPresenter.m */,
 			);
 			path = BKAlertControllerTests;
 			sourceTree = "<group>";
@@ -133,9 +147,13 @@
 		FDC826481B10AA4000463EF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD23B6891B1902C0002D7899 /* TestingPresenterFactory.h */,
+				FD23B68A1B1902C0002D7899 /* TestingPresenterFactory.m */,
 				FDC826581B11FBE200463EF2 /* InspectableBKAlertController.h */,
 				FDC826591B11FBE200463EF2 /* InspectableBKAlertController.m */,
 				FDC826491B10AA4000463EF2 /* Info.plist */,
+				FD23B67E1B18FA5B002D7899 /* TestingBKAlertPresenter.h */,
+				FD23B67F1B18FA5B002D7899 /* TestingBKAlertPresenter.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,6 +168,10 @@
 				FD8EF2DE1B17013E008A7ADA /* BKAlertPresenter.h */,
 				FD8EF2DF1B1705B6008A7ADA /* BKUIAlertControllerPresenter.h */,
 				FD8EF2E01B1705B6008A7ADA /* BKUIAlertControllerPresenter.m */,
+				FD8EF2E51B173AE8008A7ADA /* BKAlertButtonAction.h */,
+				FD8EF2E61B173AE8008A7ADA /* BKAlertButtonAction.m */,
+				FD23B6811B18FBE8002D7899 /* PresenterFactory.h */,
+				FD23B6821B18FBE8002D7899 /* PresenterFactory.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -258,6 +280,8 @@
 				FD8EF2DC1B170118008A7ADA /* BKUIAlertViewPresenter.m in Sources */,
 				FDC826341B10AA4000463EF2 /* AppDelegate.m in Sources */,
 				FDC826311B10AA4000463EF2 /* main.m in Sources */,
+				FD8EF2E71B173AE8008A7ADA /* BKAlertButtonAction.m in Sources */,
+				FD23B6831B18FBE8002D7899 /* PresenterFactory.m in Sources */,
 				FD8EF2E11B1705B6008A7ADA /* BKUIAlertControllerPresenter.m in Sources */,
 				FDC826571B10AAEE00463EF2 /* BKAlertController.m in Sources */,
 			);
@@ -268,9 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8EF2E21B1705B6008A7ADA /* BKUIAlertControllerPresenter.m in Sources */,
+				FD23B6801B18FA5B002D7899 /* TestingBKAlertPresenter.m in Sources */,
 				FDC8265A1B11FBE200463EF2 /* InspectableBKAlertController.m in Sources */,
-				FD8EF2DD1B170118008A7ADA /* BKUIAlertViewPresenter.m in Sources */,
 				FDC8264B1B10AA4000463EF2 /* BKAlertControllerTests.m in Sources */,
+				FD23B68B1B1902C0002D7899 /* TestingPresenterFactory.m in Sources */,
+				FDF2649F1B198D2500E7DA02 /* BKUIAlertControllerPresenter.m in Sources */,
 				FD8EF2E41B17068E008A7ADA /* BKUIAlertViewPresenterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

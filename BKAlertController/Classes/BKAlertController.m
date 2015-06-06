@@ -9,6 +9,7 @@
 #import "BKAlertController.h"
 #import "BKUIAlertViewPresenter.h"
 #import "BKUIAlertControllerPresenter.h"
+#import "PresenterFactory.h"
 
 @import UIKit;
 
@@ -37,24 +38,34 @@
 
 - (void)show
 {
+    [self setupPresenter];
+    [self.currentPresenter show];
+}
+- (void)setupPresenter
+{
     if([self isiOSLessThan8]) {
-        [self showAlertView];
+        [self setupAlertView];
     }
     else {
-        [self showAlertController];
+        [self setupAlertController];
     }
 }
 - (BOOL)isiOSLessThan8
 {
     return [self.currentiOSVersion floatValue] < 8.0f;
 }
-- (void)showAlertView
+- (void)setupAlertView
 {
-    self.currentPresenter = [[BKUIAlertViewPresenter alloc] init];
+    if(!self.currentPresenter) {
+        self.currentPresenter = [PresenterFactory uialertViewPresenter];
+        [self.currentPresenter show];
+    }
 }
-- (void)showAlertController
+- (void)setupAlertController
 {
-    self.currentPresenter = [[BKUIAlertControllerPresenter alloc] init];
+    if(!self.currentPresenter) {
+        self.currentPresenter = [PresenterFactory uialertControllerPresenter];
+    }
 }
 
 @end
