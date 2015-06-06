@@ -22,8 +22,8 @@
 @implementation BKAlertControllerTests
 
 - (void)setUp {
-    self.alertController = [[InspectableBKAlertController alloc] initWithTitle:@"Title" message:@"Message"];
-    self.anotherAlertController = [[InspectableBKAlertController alloc] initWithTitle:@"Another title" message:@"Another message"];
+    self.alertController = [[InspectableBKAlertController alloc] initWithTitle:@"Title" message:@"Message" controller:[UIViewController new]];
+    self.anotherAlertController = [[InspectableBKAlertController alloc] initWithTitle:@"Another title" message:@"Another message" controller:[UIViewController new]];
 
     [super setUp];
 }
@@ -82,5 +82,16 @@
     XCTAssertTrue([[self.alertController currentTestPresenter] isKindOfClass:classType]);
 }
 
+- (void)testThatAlertControllerPassButtonsToPresenter
+{
+    [self.alertController addButtonWithTitle:@"Title" action:^() {
+    }];
+    [self.alertController show];
+    
+    NSObject<BKAlertPresenter>* currentPresenter = [self.alertController currentTestPresenter];
+    NSArray* buttons = [currentPresenter valueForKey:@"buttons"];
+    
+    XCTAssertEqual(buttons.count, 1);
+}
 
 @end

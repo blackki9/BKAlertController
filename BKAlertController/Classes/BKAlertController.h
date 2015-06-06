@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BKAlertButtonAction.h"
+@import UIKit;
 
 @interface BKAlertController : NSObject
 
-
-- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message;
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message controller:(UIViewController*)controller;
+- (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action;
 - (void)show;
 
 @end

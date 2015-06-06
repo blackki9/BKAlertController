@@ -17,9 +17,11 @@
     return [[BKUIAlertViewPresenter alloc] init];
 }
 
-+ (NSObject<BKAlertPresenter>*)uialertControllerPresenter
++ (NSObject<BKAlertPresenter>*)uialertControllerPresenterWithController:(UIViewController*)controller;
 {
-    return [[BKUIAlertControllerPresenter alloc] init];
+    BKUIAlertControllerPresenter* result = [[BKUIAlertControllerPresenter alloc] init];
+    result.rootController = controller;
+    return result;
 }
 
 

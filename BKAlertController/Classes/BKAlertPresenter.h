@@ -13,6 +13,8 @@ typedef void (^ButtonActionBlock) ();
 
 @protocol BKAlertPresenter <NSObject>
 
+- (void)setAlertTitle:(NSString*)title;
+- (void)setAlertMessage:(NSString*)message;
 - (void)show;
 - (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action;
 

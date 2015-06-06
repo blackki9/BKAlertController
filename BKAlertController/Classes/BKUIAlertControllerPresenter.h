@@ -15,6 +15,8 @@
 
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, copy) NSString* message;
+@property (nonatomic, strong) UIViewController* rootController;
+
 @property (nonatomic, strong) NSMutableArray* buttons;
 
 @end

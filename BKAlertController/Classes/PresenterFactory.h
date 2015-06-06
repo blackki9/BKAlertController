@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "BKAlertPresenter.h"
+@import UIKit;
 
 @interface PresenterFactory : NSObject
 
 + (NSObject<BKAlertPresenter>*)uialertViewPresenter;
-+ (NSObject<BKAlertPresenter>*)uialertControllerPresenter;
++ (NSObject<BKAlertPresenter>*)uialertControllerPresenterWithController:(UIViewController*)controller;
 
 @end

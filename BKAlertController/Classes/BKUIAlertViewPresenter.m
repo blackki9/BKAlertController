@@ -17,6 +17,16 @@
 
 @implementation BKUIAlertViewPresenter
 
+- (void)setAlertTitle:(NSString*)title
+{
+    self.title = title;
+}
+
+- (void)setAlertMessage:(NSString*)message
+{
+    self.message = message;
+}
+
 - (void)show
 {
     self.currentAlertView = [[UIAlertView alloc] initWithTitle:self.title message:self.message delegate:self cancelButtonTitle:nil otherButtonTitles:nil];

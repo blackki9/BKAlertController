@@ -17,12 +17,22 @@
 
 @implementation BKUIAlertControllerPresenter
 
+- (void)setAlertTitle:(NSString*)title
+{
+    self.title = title;
+}
+- (void)setAlertMessage:(NSString*)message
+{
+    self.message = message;
+}
+
 - (void)show
 {
     self.currentAlert = [UIAlertController alertControllerWithTitle:self.title
                                                             message:self.message
                                                      preferredStyle:UIAlertControllerStyleAlert];
     [self addButtonsToAlert];
+    [self.rootController presentViewController:self.currentAlert animated:YES completion:nil];
 }
 - (void)addButtonsToAlert
 {

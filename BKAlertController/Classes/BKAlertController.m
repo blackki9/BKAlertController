@@ -17,6 +17,8 @@
 
 @property (nonatomic,copy,readonly) NSString* alertTitle;
 @property (nonatomic, copy,readonly) NSString* alertMessage;
+@property (nonatomic, strong) NSMutableArray* buttons;
+@property (nonatomic, strong) UIViewController* rootController;
 
 @property (nonatomic, strong) NSObject<BKAlertPresenter>* currentPresenter;
 
@@ -26,11 +28,12 @@
 
 @implementation BKAlertController
 
-- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message controller:(UIViewController*)controller;
 {
     if(self = [super init]) {
         _alertTitle = [title copy];
         _alertMessage = [message copy];
+        _rootController = controller;
         self.currentiOSVersion = [[UIDevice currentDevice] systemVersion];
     }
     return self;
@@ -39,6 +42,7 @@
 - (void)show
 {
     [self setupPresenter];
+    [self addButtonsToPresenter];
     [self.currentPresenter show];
 }
 - (void)setupPresenter
@@ -49,6 +53,9 @@
     else {
         [self setupAlertController];
     }
+    
+    [self.currentPresenter setAlertTitle:self.alertTitle];
+    [self.currentPresenter setAlertMessage:self.alertMessage];
 }
 - (BOOL)isiOSLessThan8
 {
@@ -58,14 +65,27 @@
 {
     if(!self.currentPresenter) {
         self.currentPresenter = [PresenterFactory uialertViewPresenter];
-        [self.currentPresenter show];
     }
 }
 - (void)setupAlertController
 {
     if(!self.currentPresenter) {
-        self.currentPresenter = [PresenterFactory uialertControllerPresenter];
+        self.currentPresenter = [PresenterFactory uialertControllerPresenterWithController:self.rootController];
     }
+}
+- (void)addButtonsToPresenter
+{
+    for(BKAlertButtonAction* action in self.buttons) {
+        [self.currentPresenter addButtonWithTitle:action.title action:action.buttonAction];
+    }
+}
+- (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action
+{
+    if(!self.buttons) {
+        self.buttons = [NSMutableArray array];
+    }
+    
+    [self.buttons addObject:[[BKAlertButtonAction alloc] initWithTitle:title action:action]];
 }
 
 @end

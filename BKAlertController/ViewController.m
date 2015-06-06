@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BKAlertController.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,24 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self showAlertView];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showAlertView
+{
+    BKAlertController* alertView = [[BKAlertController alloc] initWithTitle:@"Title" message:@"Message" controller:self];
+    [alertView addButtonWithTitle:@"Action" action:^{
+        NSLog(@"Action clicked");
+    }];
+    [alertView show];
 }
 
 @end
