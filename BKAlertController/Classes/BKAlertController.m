@@ -42,20 +42,23 @@
 - (void)show
 {
     [self setupPresenter];
-    [self addButtonsToPresenter];
     [self.currentPresenter show];
 }
 - (void)setupPresenter
 {
-    if([self isiOSLessThan8]) {
-        [self setupAlertView];
+    if(!_currentPresenter) {
+        if([self isiOSLessThan8]) {
+            [self setupAlertView];
+        }
+        else {
+            [self setupAlertController];
+        }
+        
+        [self.currentPresenter setAlertTitle:self.alertTitle];
+        [self.currentPresenter setAlertMessage:self.alertMessage];
+        
+        [self addButtonsToPresenter];
     }
-    else {
-        [self setupAlertController];
-    }
-    
-    [self.currentPresenter setAlertTitle:self.alertTitle];
-    [self.currentPresenter setAlertMessage:self.alertMessage];
 }
 - (BOOL)isiOSLessThan8
 {
