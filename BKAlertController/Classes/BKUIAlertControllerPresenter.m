@@ -9,6 +9,8 @@
 #import "BKUIAlertControllerPresenter.h"
 #import "BKAlertButtonAction.h"
 
+static NSMutableSet* allAlertPresenters;
+
 @interface BKUIAlertControllerPresenter()
 
 @property (nonatomic, strong) UIAlertController* currentAlert;
@@ -28,6 +30,10 @@
 
 - (void)show
 {
+    if(!allAlertPresenters) {
+        allAlertPresenters = [NSMutableSet set];
+    }
+    [allAlertPresenters addObject:self];
     self.currentAlert = [UIAlertController alertControllerWithTitle:self.title
                                                             message:self.message
                                                      preferredStyle:UIAlertControllerStyleAlert];
@@ -39,6 +45,7 @@
     for(BKAlertButtonAction* buttonAction in self.buttons) {
         UIAlertAction* alertAction = [UIAlertAction actionWithTitle:buttonAction.title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             buttonAction.buttonAction();
+           [allAlertPresenters removeObject:self];
         }];
         [self.currentAlert addAction:alertAction];
     }

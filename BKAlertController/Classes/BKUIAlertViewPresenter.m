@@ -9,6 +9,9 @@
 #import "BKUIAlertViewPresenter.h"
 #import "BKAlertButtonAction.h"
 
+static NSMutableSet* allAlertPresenters;
+
+
 @interface BKUIAlertViewPresenter()
 
 @property (nonatomic, strong) UIAlertView* currentAlertView;
@@ -29,6 +32,13 @@
 
 - (void)show
 {
+    if(!allAlertPresenters) {
+        allAlertPresenters = [NSMutableSet set];
+    }
+    if(![allAlertPresenters containsObject:self]) {
+        [allAlertPresenters addObject:self];
+    }
+
     self.currentAlertView = [[UIAlertView alloc] initWithTitle:self.title message:self.message delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     for(BKAlertButtonAction* button in self.buttons) {
         [self.currentAlertView addButtonWithTitle:button.title];
@@ -44,6 +54,8 @@
         BKAlertButtonAction* buttonBlock = self.buttons[buttonIndex];
         buttonBlock.buttonAction();
     }
+    [allAlertPresenters removeObject:self];
+
 }
 
 - (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action
