@@ -16,6 +16,8 @@
 + (instancetype)alertControllerWithOkButtonAndTitle:(NSString *)title message:(NSString *)message;
 
 - (instancetype)initWithTitle:(NSString*)title message:(NSString*)message controller:(UIViewController*)controller;
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message;
+
 - (void)addButtonWithTitle:(NSString*)title action:(ButtonActionBlock)action;
 - (void)show;
 
