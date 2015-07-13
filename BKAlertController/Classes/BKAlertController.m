@@ -28,6 +28,23 @@
 
 @implementation BKAlertController
 
++ (instancetype)alertControllerWithOkButtonAndTitle:(NSString*)title message:(NSString*)message controller:(UIViewController*)controller
+{
+    BKAlertController* alert = [[BKAlertController alloc] initWithTitle:title message:message controller:controller];
+    [alert addButtonWithTitle:@"OK" action:^{
+        
+    }];
+    return alert;
+}
++ (instancetype)alertControllerWithOkButtonAndTitle:(NSString *)title message:(NSString *)message
+{
+    BKAlertController* alert = [[BKAlertController alloc] initWithTitle:title message:message];
+    [alert addButtonWithTitle:@"OK" action:^{
+        
+    }];
+    return alert;
+}
+
 - (instancetype)initWithTitle:(NSString*)title message:(NSString*)message controller:(UIViewController*)controller;
 {
     if(self = [super init]) {
@@ -37,6 +54,12 @@
         self.currentiOSVersion = [[UIDevice currentDevice] systemVersion];
     }
     return self;
+}
+- (instancetype)initWithTitle:(NSString*)title message:(NSString*)message
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    return [self initWithTitle:title message:message controller:rootViewController];
 }
 
 - (void)show
